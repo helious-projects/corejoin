@@ -1,11 +1,17 @@
 @import 'tailwindcss';
 
 :root {
-  --primary: rgba(19, 89, 89, 0.5);
+  --primary: #135959;
+  --font-ibm-plex-mono: var(--font-ibm-plex-mono), sans-serif;
+  --font-sf-pro: var(--font-sf-pro), sans-serif;
+  --danger: red;
 }
 
 @theme inline {
   --color-primary: var(--primary);
+  --font-ibm-plex-mono: var(--font-ibm-plex-mono);
+  --font-sf-pro: var(--font-sf-pro);
+  --color-danger: var(--danger);
 }
 
 body {
