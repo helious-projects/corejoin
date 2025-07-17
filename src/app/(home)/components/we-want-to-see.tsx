@@ -22,9 +22,9 @@ export const WeWantToSee = () => {
               We Want to See You Win
             </Title>
             <Text size="base">
-              A solid brokerage can make or break your success. CoreJoin is here
-              to ensure you land on the right side – with safety, support, and
-              strategy all aligned.
+              Success starts with the right partner - choose a brokerage that
+              gets you there. CoreJoin is here to ensure you land on the right
+              side – with safety, support, and strategy all aligned.
             </Text>
           </div>
           <Title
