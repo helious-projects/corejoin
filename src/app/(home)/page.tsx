@@ -2,6 +2,7 @@ import {
   Description,
   Hero,
   PreferencesToPerfomance,
+  Slider,
   WeAreReady,
   WeWantToSee,
   WhatIncluded,
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Description />
       <WeAreReady />
+      <Slider />
       <PreferencesToPerfomance />
       <WhatIncluded />
       <WeWantToSee />
