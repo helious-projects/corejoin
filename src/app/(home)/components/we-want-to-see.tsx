@@ -22,7 +22,7 @@ export const WeWantToSee = () => {
               We Want to See You Win
             </Title>
             <Text size="base">
-              Success starts with the right partner - choose a brokerage that
+              Success starts with the right partner – choose a brokerage that
               gets you there. CoreJoin is here to ensure you land on the right
               side – with safety, support, and strategy all aligned.
             </Text>
