@@ -120,16 +120,21 @@ const SliderItem = ({
     <Title size="4xl" weight={400}>
       {title}
     </Title>
-    <span className={cn('hidden', active && 'block')}>
+    <div
+      className={cn(
+        'overflow-hidden transition-all duration-800 ease-in-out',
+        active ? 'mt-2 max-h-[200px] opacity-100' : 'max-h-0 opacity-0',
+      )}
+    >
       <Text size="base">{text}</Text>
-    </span>
+    </div>
   </button>
 );
 
 const ImageBox = () => (
   <div className="w-[60%] max-md:w-full">
     <Image
-      className="h-[550px] w-full max-md:h-[250px]"
+      className="h-[550px] w-full object-cover max-md:h-[250px]"
       src="/images/transparent-box.png"
       alt="slider-image"
       width={500}

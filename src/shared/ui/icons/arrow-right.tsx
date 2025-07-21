@@ -9,6 +9,7 @@ export const ArrowRightIcon = () => (
     fill="none"
   >
     <path
+      className="stroke-black transition duration-300 ease-in-out group-hover:stroke-white"
       d="M3.3335 8.00016H12.6668M12.6668 8.00016L8.00016 3.3335M12.6668 8.00016L8.00016 12.6668"
       stroke="#1E1E1E"
       strokeWidth="1.5"

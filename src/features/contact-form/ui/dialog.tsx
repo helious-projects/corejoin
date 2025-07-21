@@ -44,6 +44,7 @@ export const ThankYouDialog = ({
                   on it. Expect to hear from us within the next 10 minutes —
                   we’re here to match you with the right broker and guide you
                   with clarity and confidence. <br />
+                  <br />
                   🔍 Next Step: Sit back and let us do the searching. <br />
                   💡 Our Goal: Making your trading decisions smarter, faster,
                   and easier. <br />
