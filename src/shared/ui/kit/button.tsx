@@ -10,7 +10,7 @@ export const Button = ({
 }: ButtonHTMLAttributes<HTMLButtonElement>) => (
   <button
     className={cn(
-      'flex w-max cursor-pointer items-center gap-2 bg-white p-[2px] text-black transition duration-300 ease-in-out outline-none hover:bg-black/80 hover:text-white [&>*:hover]:text-white',
+      'group flex w-max cursor-pointer items-center gap-2 bg-white p-[2px] text-black transition duration-300 ease-in-out outline-none hover:bg-black hover:text-white',
       className,
     )}
     {...args}
