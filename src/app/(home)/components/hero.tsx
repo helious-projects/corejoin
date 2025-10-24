@@ -22,7 +22,7 @@ export const Hero = () => {
           />
         </div>
         <section className="absolute flex h-full w-full flex-col justify-between px-[100px] py-10 max-md:px-4">
-          <Text>Logo</Text>
+          <Image src="/logo.svg" alt="logo" width={134} height={23} />
           <div className="flex flex-col gap-6">
             <Title as="h1" weight={400} color="white">
               Navigate Global Markets with <br />

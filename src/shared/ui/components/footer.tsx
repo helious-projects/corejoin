@@ -27,7 +27,13 @@ export const Footer = () => {
             <ContactForm />
           </section>
         </section>
-        <Text>Logo</Text>
+        <Image
+          className="z-10"
+          src="/logo.svg"
+          alt="logo"
+          width={134}
+          height={23}
+        />
       </section>
       <Image
         className="absolute !top-auto right-0 bottom-0 left-0 z-0 !h-[450px] !w-full max-md:!h-[150px]"
