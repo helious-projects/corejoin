@@ -11,17 +11,19 @@ const items = [
   { imgUrl: '/images/perf-1.png' },
   { number: 2, value: 'Support You Can Reach' },
   { imgUrl: '/images/perf-2.png' },
-  { number: 3, value: 'Built-In Risk Management Tools' },
+  { number: 3, value: 'Global Market Availability' },
   { number: 4, value: 'Cost-Effective Spreads' },
   { number: 5, value: 'Trading With Leverage' },
-  { number: 6, value: 'Global Market Availability' },
+  { number: 6, value: 'Built-In Risk Management Tools' },
   { imgUrl: '/images/perf-3.png' },
 ];
 
 export const PreferencesToPerfomance = () => {
   return (
     <section className="flex flex-col gap-10 px-[100px] py-[80px] max-md:px-4 max-md:py-10">
-      <Title size="base">From Preferences to Performance</Title>
+      <Title size="base" weight={400}>
+        From Preferences to Performance
+      </Title>
       <section className="flex flex-col gap-4">
         <CardsLayout>
           <Card

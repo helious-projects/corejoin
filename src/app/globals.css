@@ -2,18 +2,17 @@
 
 :root {
   --primary: #135959;
-  --font-ibm-plex-mono: var(--font-ibm-plex-mono), sans-serif;
-  --font-sf-pro: var(--font-sf-pro), sans-serif;
+  --font-epilogue: var(--font-epilogue), sans-serif;
   --danger: red;
 }
 
 @theme inline {
   --color-primary: var(--primary);
-  --font-ibm-plex-mono: var(--font-ibm-plex-mono);
-  --font-sf-pro: var(--font-sf-pro);
+  --font-epilogue: var(--font-epilogue);
   --color-danger: var(--danger);
 }
 
 body {
+  font-family: var(--font-epilogue), sans-serif;
   background: #ffffff;
 }
