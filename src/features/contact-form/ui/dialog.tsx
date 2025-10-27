@@ -39,7 +39,12 @@ export const ThankYouDialog = ({
                 <Title as="h3" size="4xl" weight={400}>
                   Thanks for reaching out to CoreJoin
                 </Title>
-                <Title as="p" size="sm" weight={400} className="text-black/50">
+                <Title
+                  as="p"
+                  size="sm"
+                  weight={400}
+                  className="z-10 leading-[120%] text-black/50"
+                >
                   We’ve received your request, and our specialists are already
                   on it. Expect to hear from us within the next 10 minutes —
                   we’re here to match you with the right broker and guide you
@@ -53,8 +58,8 @@ export const ThankYouDialog = ({
                 </Title>
               </section>
               <Image
-                className="absolute !top-auto !right-0 bottom-0 !left-auto !h-[250px] !w-[633px] max-md:!-right-[8%] max-md:!h-[150px] max-md:!w-[433px]"
-                src="/images/dialog-box.png"
+                className="absolute !top-20 !-right-40 bottom-0 !left-auto !h-[500px] !w-[833px]"
+                src="/images/dialog-phone.png"
                 alt="dialog-bg"
                 fill
                 unoptimized

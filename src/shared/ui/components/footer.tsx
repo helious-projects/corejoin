@@ -23,7 +23,10 @@ export const Footer = () => {
               tailored support based on your trading goals.
             </Text>
           </div>
-          <section className="w-1/2 max-md:w-full">
+          <section className="flex w-1/2 flex-col gap-4 max-md:w-full">
+            <Title size="2xl" weight={400}>
+              Contact CoreJoin
+            </Title>
             <ContactForm />
           </section>
         </section>
