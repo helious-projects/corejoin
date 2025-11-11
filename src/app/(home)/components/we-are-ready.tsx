@@ -55,7 +55,7 @@ const EliteAccess = () => (
         The effective route to your next broker
       </Text>
       <Title as="p" size="sm" weight={400} color="black" className="opacity-60">
-        Evaluating brokerage platforms can feel overwhelming.CoreJoin considers
+        Evaluating brokerage platforms can feel overwhelming. CoreJoin considers
         every key aspect – platform usability, cost structure, and support – to
         help you choose the most beneficial partner.
       </Title>
