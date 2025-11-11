@@ -121,7 +121,7 @@ export const ContactForm = () => {
         {({ name, state, handleBlur, handleChange }) => (
           <TextArea
             name={name}
-            placeholder="Send us message"
+            placeholder="Send us a message"
             value={String(state.value)}
             onBlur={handleBlur}
             onChange={e => handleChange(e.target.value)}
@@ -136,7 +136,7 @@ export const ContactForm = () => {
               'Sending...'
             ) : (
               <>
-                Send request <ArrowRightIcon />
+                Send a request <ArrowRightIcon />
               </>
             )}
           </Button>
