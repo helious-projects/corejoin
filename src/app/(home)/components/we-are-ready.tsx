@@ -22,7 +22,7 @@ export const WeAreReady = () => {
 const DependableSolutions = () => (
   <article className="relative flex h-[600px] w-1/2 flex-col overflow-hidden rounded-2xl bg-[rgba(147,147,147,0.10)] p-10 max-xl:h-[700px] max-md:h-[400px] max-md:w-full max-md:p-6">
     <Image
-      className="!-top-[6%] !right-0 !left-auto !h-[410px] !w-[490px] max-md:!-top-[18%] max-md:!h-[210px] max-md:!w-[250px]"
+      className="!-top-[6%] !right-0 !left-auto h-auto md:!h-[410px] !w-[490px] max-md:!-top-[0%] max-md:!h-[200px] max-md:object-contain max-md:!w-[250px]"
       src="/images/colbs.png"
       alt="colbs"
       fill
