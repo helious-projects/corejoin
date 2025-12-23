@@ -7,7 +7,7 @@ import { Title } from '@/shared/ui/kit/title';
 
 export const WeAreReady = () => {
   return (
-    <section className="flex flex-col gap-8 px-[100px] pt-10 pb-20 max-md:px-4 max-md:py-10">
+    <section className="flex flex-col gap-8 px-[100px] min-[1800]:px-[250px] pt-10 pb-20 max-md:px-4 max-md:py-10">
       <Title size="base" weight={400}>
         We’re Ready When You Are
       </Title>

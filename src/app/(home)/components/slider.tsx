@@ -13,7 +13,7 @@ import 'swiper/css/pagination';
 
 export const Slider = () => {
   return (
-    <section className="flex px-[100px] py-[80px] max-md:flex-col max-md:px-4 max-md:pb-10">
+    <section className="flex px-[100px] min-[1800]:px-[250px] py-[80px] max-md:flex-col max-md:px-4 max-md:pb-10">
       <div className="w-[40%] max-md:w-full">
         <SliderImp />
       </div>
@@ -134,7 +134,7 @@ const SliderItem = ({
 const ImageBox = () => (
   <div className="w-[60%] max-md:w-full">
     <Image
-      className="h-[550px] w-full object-cover max-md:h-[250px]"
+      className="h-[550px] w-full object-contain max-md:h-[250px]"
       src="/images/transparent-box.png"
       alt="slider-image"
       width={500}

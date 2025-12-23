@@ -41,13 +41,19 @@ export const ContactForm = () => {
       onChange: contactSchema,
     },
     onSubmit: async ({ value }) => {
-      const { status } = await sendContactForm(value);
+      try {
+        const { status } = await sendContactForm(value);
 
-      if (status === 'OK') {
-        setIsOpen(true);
-        reset();
-      } else {
-        notifyError('Failed to send message. Try again later.');
+        if (status === 'OK') {
+          setIsOpen(true);
+          reset();
+        } else {
+          notifyError('Failed to send message. Try again later.');
+        }
+      } catch (error) {
+        const errorMessage =
+          error instanceof Error ? error.message : 'Failed to send message. Try again later.';
+        notifyError(errorMessage);
       }
     },
   });
