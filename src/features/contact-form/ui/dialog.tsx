@@ -58,7 +58,7 @@ export const ThankYouDialog = ({
                 </Title>
               </section>
               <Image
-                className="absolute !top-20 !-right-40 bottom-0 !left-auto !h-[500px] !w-[833px]"
+                className="absolute !top-20 pointer-events-none !-right-100 md:!-right-40 bottom-0 !left-auto !h-[500px] !w-auto md:!w-[833px] max-w-[unset]"
                 src="/images/dialog-phone.png"
                 alt="dialog-bg"
                 fill
