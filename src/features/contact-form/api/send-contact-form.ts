@@ -1,14 +1,12 @@
 'use server';
 
-import { google } from 'googleapis';
+import sgMail from '@sendgrid/mail';
 
 import {
-  EMAIL_CLIENT_ID,
-  EMAIL_CLIENT_SECRET,
-  EMAIL_REFRESH_TOKEN,
   EMAIL_USER,
+  SENDGRID_API_KEY,
+  SENDGRID_FROM_EMAIL,
 } from '@/shared/config/env';
-import { makeEmailBody } from '@/shared/lib/utils/email';
 
 import type { ContactForm } from '../model/schema';
 
@@ -20,49 +18,58 @@ export async function sendContactForm({
   message,
 }: ContactForm) {
   try {
-    const OAuth2 = google.auth.OAuth2;
-    const oauth2Client = new OAuth2(
-      EMAIL_CLIENT_ID,
-      EMAIL_CLIENT_SECRET,
-      'https://developers.google.com/oauthplayground',
-    );
-
-    oauth2Client.setCredentials({
-      refresh_token: EMAIL_REFRESH_TOKEN,
-    });
-
-    const accessToken = await oauth2Client.getAccessToken();
-
-    if (!accessToken.token) {
-      throw new Error('Failed to generate access token.');
+    if (!SENDGRID_API_KEY) {
+      throw new Error('SendGrid API key is not configured.');
     }
 
-    const gmail = google.gmail({ version: 'v1', auth: oauth2Client });
+    if (!EMAIL_USER) {
+      throw new Error('Email user is not configured.');
+    }
 
-    const adminBody = makeEmailBody({
-      to: EMAIL_USER,
-      from: EMAIL_USER,
+    if (!SENDGRID_FROM_EMAIL) {
+      throw new Error('SendGrid from email is not configured.');
+    }
+
+    sgMail.setApiKey(SENDGRID_API_KEY);
+
+    const emailsTo = [EMAIL_USER];
+
+    const msg = {
+      to: emailsTo,
+      from: SENDGRID_FROM_EMAIL,
       subject: 'New Message from Contact Form',
-      message: `<p><b>Full Name:</b> ${firstName} ${lastName}</p>
+      html: `<p><b>Full Name:</b> ${firstName} ${lastName}</p>
        <p><b>Email:</b> ${email}</p>
        <p><b>Phone:</b> ${phone}</p>
        <p><b>Message:</b> ${message}</p>`,
-    });
+    };
 
-    const res = await gmail.users.messages.send({
-      userId: 'me',
-      requestBody: {
-        raw: adminBody,
-      },
-    });
+    const res = await sgMail.send(msg);
 
-    if (res.status !== 200) {
-      throw new Error(`Failed to send email. Status: ${res.status}`);
-    }
-
-    return { data: res.data, status: res.statusText };
+    // SendGrid returns 202 for successful sends
+    return { data: res[0].body, status: res[0].statusCode === 202 ? 'OK' : 'Error' };
   } catch (err: unknown) {
-    console.error('Error order product:', err);
+    console.error('Error sending contact form:', err);
+
+    // Handle SendGrid specific errors
+    if (err && typeof err === 'object' && 'response' in err) {
+      const sendGridError = err as {
+        response?: {
+          body?: {
+            errors?: Array<{ message?: string; field?: string }>;
+          };
+        };
+        message?: string;
+      };
+
+      const errorDetails =
+        sendGridError.response?.body?.errors
+          ?.map((e) => `${e.field || 'Error'}: ${e.message || 'Unknown'}`)
+          .join(', ') || sendGridError.message || 'Unknown SendGrid error';
+
+      console.error('SendGrid error details:', sendGridError.response?.body);
+      throw new Error(`Failed to send email: ${errorDetails}`);
+    }
 
     if (err instanceof Error) {
       throw new Error(err.message);

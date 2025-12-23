@@ -20,7 +20,7 @@ const items = [
 
 export const PreferencesToPerfomance = () => {
   return (
-    <section className="flex flex-col gap-10 px-[100px] py-[80px] max-md:px-4 max-md:py-10">
+    <section className="flex flex-col gap-10 px-[100px] min-[1800]:px-[250px] py-[80px] max-md:px-4 max-md:py-10">
       <Title size="base" weight={400}>
         From Preferences to Performance
       </Title>
@@ -32,7 +32,7 @@ export const PreferencesToPerfomance = () => {
             value={items[0].value ?? ''}
           />
           <Image
-            className="!h-[230px] !w-[25%] rounded-[60px] object-cover max-md:!w-full"
+            className="!h-[240px] md:!h-[230px] 2xl:!h-[300px] !w-[25%] rounded-[60px] object-cover max-md:!w-full"
             src={items[1].imgUrl ?? ''}
             alt={items[1].imgUrl ?? ''}
             width={304}
@@ -47,7 +47,7 @@ export const PreferencesToPerfomance = () => {
         </CardsLayout>
         <CardsLayout>
           <Image
-            className="!h-[230px] !w-[50%] rounded-[60px] object-cover max-md:!w-full"
+            className="!h-[240px] md:!h-[230px] 2xl:!h-[300px] !w-[50%] rounded-[60px] object-cover max-md:!w-full"
             src={items[3].imgUrl ?? ''}
             alt={items[3].imgUrl ?? ''}
             width={304}
@@ -77,7 +77,7 @@ export const PreferencesToPerfomance = () => {
             value={items[7].value ?? ''}
           />
           <Image
-            className="!h-[230px] !w-[50%] rounded-[60px] object-cover max-md:!w-full"
+            className="!h-[240px] md:!h-[230px] 2xl:!h-[300px] !w-[50%] rounded-[60px] object-cover max-md:!w-full"
             src={items[8].imgUrl ?? ''}
             alt={items[8].imgUrl ?? ''}
             width={304}
@@ -101,7 +101,7 @@ const Card = ({
 }) => (
   <article
     className={cn(
-      'flex h-[230px] flex-col justify-between rounded-2xl bg-[rgba(147,147,147,0.10)] p-10 max-md:h-[180px]',
+      'flex h-[240px] md:!h-[230px] 2xl:!h-[300px] flex-col justify-between rounded-2xl bg-[rgba(147,147,147,0.10)] p-10 max-md:h-[180px]',
       className,
     )}
   >

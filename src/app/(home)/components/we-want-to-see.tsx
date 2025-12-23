@@ -7,7 +7,7 @@ import { Title } from '@/shared/ui/kit/title';
 
 export const WeWantToSee = () => {
   return (
-    <section className="bg-[rgba(241,249,252,0.70)] px-[100px] pt-6 max-md:px-4">
+    <section className="bg-[rgba(241,249,252,0.70)] px-[100px] min-[1800]:px-[250px] pt-6 max-md:px-4">
       <section className="relative flex h-[400px] flex-col">
         <Image
           className="z-0 rounded-[14px] object-cover"

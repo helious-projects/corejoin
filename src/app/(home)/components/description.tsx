@@ -4,7 +4,7 @@ import { Text } from '@/shared/ui/kit/text';
 
 export const Description = () => {
   return (
-    <section className="px-[100px] py-10 max-md:px-4 max-md:py-10">
+    <section className="px-[100px] py-10 max-md:px-4 min-[1800]:px-[250px] max-md:py-10">
       <div className="w-[76%] max-lg:w-full">
         <Text
           weight={200}

@@ -9,7 +9,7 @@ import { Title } from '@/shared/ui/kit/title';
 
 export const Footer = () => {
   return (
-    <footer className="relative bg-[rgba(241,249,252,0.70)] px-[100px] pt-[100px] max-md:px-4 max-md:pt-[60px]">
+    <footer className="relative bg-[rgba(241,249,252,0.70)] px-[100px] min-[1800]:px-[250px] pt-[100px] max-md:px-4 max-md:pt-[60px]">
       <section className="flex flex-col gap-[100px] pb-[200px] max-md:pb-[80px]">
         <section className="flex gap-[60px] max-md:flex-col">
           <div className="z-10 flex w-1/2 flex-col gap-4 max-md:w-full">

@@ -21,7 +21,7 @@ export const Hero = () => {
             unoptimized
           />
         </div>
-        <section className="absolute flex h-full w-full flex-col justify-between gap-[80px] px-[100px] py-10 max-md:justify-start max-md:px-4">
+        <section className="absolute flex h-full w-full flex-col justify-between gap-[80px] px-[100px] min-[1800]:px-[250px] py-10 max-md:justify-start max-md:px-4">
           <Image
             className="z-20"
             src="/logo.svg"

@@ -70,7 +70,7 @@ export const WhatIncluded = () => {
   const { width } = useWindowSize();
 
   return (
-    <section className="bg-[rgba(241,249,252,0.70)] px-[100px] pt-[80px] max-md:px-4">
+    <section className="bg-[rgba(241,249,252,0.70)] px-[100px] min-[1800]:px-[250px] pt-[80px] max-md:px-4">
       <section className="relative flex h-[670px] flex-col justify-between rounded-[14px] px-10 py-6 max-md:h-max max-md:gap-10">
         <Title size="4xl" weight={400} className="z-20">
           What’s Included with CoreJoin
